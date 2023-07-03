@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Шедевры Кухни | Бронирование</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="style.css">
+      <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+      <link rel="manifest" href="favicon/site.webmanifest">
+      <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+      <meta name="msapplication-TileColor" content="#da532c">
+      <meta name="theme-color" content="#ffffff">
+   </head>
+   <body>
+      <div class="BurgerMenu" onclick="ShowMenuReserv()">
+         <span class="BurgerLine"></span>
+         <span class="BurgerLine"></span>
+         <span class="BurgerLine"></span>
+      </div>
+      <ul class="ReservNavigation">
+         <li> <a href="index.html"> Главная   </a></li>
+         <li> <a href="menu.html">  Меню  </a></li>
+         <li> <a href="index.html"> Отзывы  </a></li>
+      </ul>
+      <div class="reserv_header">
+         <a href="index.html">
+            <li>Главная</li>
+         </a>
+         <a href="menu.html">
+            <li>Меню</li>
+         </a>
+         <a href="reservation.html">
+            <li>Бронирование</li>
+         </a>
+         <a href="index.html">
+            <li>Отзывы</li>
+         </a>
+      </div>
+      <section class="reservation_main">
+         <div class="reservation_main__content">
+            <div class="reservation__title">Шедевры кухни</div>
+            <span class="white_line"></span>
+            <h3>Добро пожаловать!  </h3>
+            <p class="reservation_text">   
+               Здесь вы сможете забронировать столик к назначенному времени,  это удобный и быстрый способ зарезервировать место для посещения ресторана. Вы можете выбрать дату, время и количество человек, указать свои контактные данные и дополнительные пожелания. После подтверждения бронирования, вы получите уведомление на электронную почту или по SMS. 
+            </p>
+            <h3>Бронирование</h3>
+            <select >
+               <option value="" disabled selected>Дата</option>
+               <option>Сегодня</option>
+               <option>Завтра</option>
+               <option>Послезавтра</option>
+               <option>Конкретная дата </option>
+            </select>
+            <select >
+               <option value="" disabled selected>Время</option>
+               <option>11:00-13:00</option>
+               <option>14:00-16:00</option>
+               <option>17:00-19:00</option>
+               <option> 20:00-22:00</option>
+            </select>
+            <select >
+               <option value="" disabled selected>Количество человек</option>
+               <option>5</option>
+               <option>10</option>
+               <option>15</option>
+               <option>20  </option>
+            </select>
+            <button> Заказать</button>
+         </div>
+      </section>
+      <footer>
+         <ul class="left">
+            <li>Отзывы</li>
+            <li>Меню</li>
+            <li>Бронирование</li>
+            <li>События</li>
+            <li>Контакты</li>
+         </ul>
+         <ul class="right">
+            <li>Улица Кирова, 55</li>
+            <li> + 8 (913) 487 05 43</li>
+            <li>График работы: 11:00 - 01:00 </li>
+         </ul>
+         <p class="rights"> Vladislaw Dokuchaev © All Rights Reserved </p>
+         <div class="social">
+            <img src="assets/icons/insta.svg" alt="">
+            <img src="assets/icons/vk.svg" alt="">
+            <img src="assets/icons/gmaps.svg" alt="">
+         </div>
+      </footer>
+   </body>
+   <script src="script.js"></script>

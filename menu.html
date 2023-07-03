@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Шедевры Кухни | Меню</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="style.css">
+      <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+      <link rel="manifest" href="favicon/site.webmanifest">
+      <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+      <meta name="msapplication-TileColor" content="#da532c">
+      <meta name="theme-color" content="#ffffff">
+   </head>
+   <div class="SideMenu">
+      <span class="SideMenu__closeButton" onclick="CloseSide()">X</span> 
+      <div class="SideMenu_MainCont">
+         <div class="SideMenu_Items">
+            <div class="SideMenu_Item">
+               <img src="assets/menu/borcch.png" alt="" class="SideMenu_Image">
+               <div class="SideMenu__textBlock">
+                  <p class="SideMenu_Item__title">Борщ</p>
+                  <p class="SideMenu_Item__description">Горячее | Обед
+                  </p>
+               </div>
+               <div class="SideMenu__Details">
+                  <div class="price">999$</div>
+                  <div class="price_num">
+                     <p>-</p>
+                     <p>1</p>
+                     <p>+</p>
+                  </div>
+                  <span class="Item_Delete">X</span>
+               </div>
+            </div>
+            <div class="SideMenu_Item">
+               <img src="assets/menu/Pancakes.webp" alt="" class="SideMenu_Image">
+               <div class="SideMenu__textBlock">
+                  <p class="SideMenu_Item__title">Панкейк</p>
+                  <p class="SideMenu_Item__description">Горячее | Обед
+                  </p>
+               </div>
+               <div class="SideMenu__Details">
+                  <div class="price">999$</div>
+                  <div class="price_num">
+                     <p>-</p>
+                     <p>1</p>
+                     <p>+</p>
+                  </div>
+                  <span class="Item_Delete">X</span>
+               </div>
+            </div>
+            <div class="SideMenu_Item">
+               <img src="assets/menu/fish.png" alt="" class="SideMenu_Image">
+               <div class="SideMenu__textBlock">
+                  <p class="SideMenu_Item__title">Запечёная рыба</p>
+                  <p class="SideMenu_Item__description">Горячее | Обед
+                  </p>
+               </div>
+               <div class="SideMenu__Details">
+                  <div class="price">999$</div>
+                  <div class="price_num">
+                     <p>-</p>
+                     <p>1</p>
+                     <p>+</p>
+                  </div>
+                  <span class="Item_Delete">X</span>
+               </div>
+            </div>
+         </div>
+         <div class="SideMenu__Order">
+            <div class="totalSum">
+               <p>ИТОГО</p>
+               <p>2,997$</p>
+            </div>
+            <button class="ToOrder">ЗАКАЗАТЬ</button>
+         </div>
+      </div>
+   </div>
+   <body>
+      <h2 class="MobileLogo">Шедевры кухни</h2>
+      <div class="BurgerMenu" onclick="ShowMenu()">
+         <span class="BurgerLine"></span>
+         <span class="BurgerLine"></span>
+         <span class="BurgerLine"></span>
+      </div>
+      <header class="Menu">
+         <p class="Logo">Шедевры кухни</p>
+         <ul class="navigation ">
+            <a href="index.html">
+               <li>Главная</li>
+            </a>
+            <a href="menu.html">
+               <li>Меню</li>
+            </a>
+            <a href="reservation.html">
+               <li>Бронирование</li>
+            </a>
+            <a href="#review">
+               <li>Отзывы</li>
+            </a>
+         </ul>
+         <div class="purchase">
+            <a href="reservation.html" class="purchase_button">
+               <p> ЗАБРОНИРОВАТЬ  </p>
+            </a>
+            <img src="assets/icons/cartWhite.svg" onclick="OpenSide()"  alt="">
+         </div>
+      </header>
+      <main>
+         <div class="MenuWrapper">
+            <section class="MenuWrapper__Title">
+               <h3>Для счастливого дня</h3>
+               <h2>НАСЛАДИТЕСЬ  <br>  ВКУСНОЙ ЕДОЙ</h2>
+            </section>
+            <span class="Menu__next">
+            <a href="#defaultOpen"> <img src="assets/icons/down.svg"  alt=""></a> 
+            </span>
+         </div>
+         <section class="MainMenu">
+            <div class="tab">
+               <button class="tablinks active" onclick="openFood(event, 'breakfast')"  id="defaultOpen">
+                  <img src="assets/icons/BreakfastBlack.svg" alt="">
+                  <h3>Завтрак</h3>
+               </button>
+               <button class="tablinks" onclick="openFood(event, 'Lunch')">
+                  <img src="assets/icons/LunchBlack.svg" alt="">
+                  <h3>Обед</h3>
+               </button>
+               <button class="tablinks" onclick="openFood(event, 'Desert')">
+                  <img src="assets/icons/DessertBlack.svg" alt="">
+                  <h3>Десерты</h3>
+               </button>
+               <button class="tablinks" onclick="openFood(event, 'Drinks')">
+                  <img src="assets/icons/DrinksBlack.svg" alt="">
+                  <h3>Напитки</h3>
+               </button>
+               <button class="tablinks" onclick="openFood(event, 'Dinner')">
+                  <img src="assets/icons/DinnerBlack.svg" alt="">
+                  <h3>Ужин</h3>
+               </button>
+            </div>
+            <div id="breakfast" class="tabcontent " style="display: block;">
+               <section class="MenuContent">
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/Waffles.jpg" alt="">
+                     <h4>Вафли</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/Omlette.jpg" alt="">
+                     <h4>Омлет</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/Yogurt.png" alt="">
+                     <h4>Йогурт</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/BananaPoridje.jpg" alt="">
+                     <h4>Банановая каша</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/Salad.png" alt="">
+                     <h4>Салат</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/Waffles.jpg" alt="">
+                     <h4>Вафли</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/Omlette.jpg" alt="">
+                     <h4>Омлет</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/Yogurt.png" alt="">
+                     <h4>Йогурт</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/BananaPoridje.jpg" alt="">
+                     <h4>Банановая каша</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/Salad.png" alt="">
+                     <h4>Салат</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/Waffles.jpg" alt="">
+                     <h4>Вафли</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/Omlette.jpg" alt="">
+                     <h4>Омлет</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/Yogurt.png" alt="">
+                     <h4>Йогурт</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/BananaPoridje.jpg" alt="">
+                     <h4>Банановая каша</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/Salad.png" alt="">
+                     <h4>Салат</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+               </section>
+            </div>
+            <div id="Lunch" class="tabcontent">
+               <section class="MenuContent">
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/borcch.png" alt="">
+                     <h4>Борщ</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/fish.png" alt="">
+                     <h4>Запечёная рыба</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/Sandwotch.png" alt="">
+                     <h4>Сэндвич</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/borcch.png" alt="">
+                     <h4>Борщ</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/fish.png" alt="">
+                     <h4>Запечёная рыба</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/Sandwotch.png" alt="">
+                     <h4>Сэндвич</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/borcch.png" alt="">
+                     <h4>Борщ</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/fish.png" alt="">
+                     <h4>Запечёная рыба</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/Sandwotch.png" alt="">
+                     <h4>Сэндвич</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/borcch.png" alt="">
+                     <h4>Борщ</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/fish.png" alt="">
+                     <h4>Запечёная рыба</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/Sandwotch.png" alt="">
+                     <h4>Сэндвич</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+               </section>
+            </div>
+            <div id="Dinner" class="tabcontent">
+               <section class="MenuContent">
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/CreamSoup.png" alt="">
+                     <h4>Кремовый Суп</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/cracker.png" alt="">
+                     <h4> Крекеры с запечёной рыбой</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/ItalianChicken.png" alt="">
+                     <h4>Курица по Итальянски</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/CreamSoup.png" alt="">
+                     <h4>Кремовый Суп</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/cracker.png" alt="">
+                     <h4> Крекеры с запечёной рыбой</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/ItalianChicken.png" alt="">
+                     <h4>Курица по Итальянски</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/CreamSoup.png" alt="">
+                     <h4>Кремовый Суп</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/cracker.png" alt="">
+                     <h4> Крекеры с запечёной рыбой</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/ItalianChicken.png" alt="">
+                     <h4>Курица по Итальянски</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+               </section>
+            </div>
+            <div id="Desert" class="tabcontent">
+               <section class="MenuContent">
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/Pancakes.webp" alt="">
+                     <h4>Панкейк</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/Cake.jpg" alt="">
+                     <h4>Шоколадный торт с клубникой</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/pahlava.jpg" alt="">
+                     <h4>Пахлава</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+               </section>
+            </div>
+            <div id="Drinks" class="tabcontent">
+               <section class="MenuContent">
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/Caprese.jpg" alt="">
+                     <h4>Мартини "Капрезе"</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/Lagoon.jpg" alt="">
+                     <h4>Коктейль "Голубая Лагуна"</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+                  <div class="MenuContent__item">
+                     <img src="assets/menu/bwidow.jpg" alt="">
+                     <h4>Коктейль "Чёрная вдова"</h4>
+                     <p class="price">$999.99</p>
+                     <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur alias, ducimus perferendis consequuntur fuga impedit tempora quidem iusto quibusdam! </p>
+                     <button class="purchasing">В корзину</button>
+                  </div>
+               </section>
+            </div>
+         </section>
+      </main>
+      <footer>
+         <ul class="left">
+            <li>Отзывы</li>
+            <li>Меню</li>
+            <li>Бронирование</li>
+            <li>События</li>
+            <li>Контакты</li>
+         </ul>
+         <ul class="right">
+            <li>Улица Кирова, 55</li>
+            <li> + 8 (913) 487 05 43</li>
+            <li>График работы: 11:00 - 01:00 </li>
+         </ul>
+         <p class="rights"> Vladislaw Dokuchaev © All Rights Reserved </p>
+         <div class="social">
+            <img src="assets/icons/insta.svg" alt="">
+            <img src="assets/icons/vk.svg" alt="">
+            <img src="assets/icons/gmaps.svg" alt="">
+         </div>
+      </footer>
+   </body>
+   <script src="script.js"></script>

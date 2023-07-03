@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Шедевры Кухни</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="style.css">
+      <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+      <link rel="manifest" href="favicon/site.webmanifest">
+      <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+      <meta name="msapplication-TileColor" content="#da532c">
+      <meta name="theme-color" content="#ffffff">
+   </head>
+   <body>
+      <div class="SideMenu">
+         <span class="SideMenu__closeButton" onclick="CloseSide()">X</span> 
+         <div class="SideMenu_MainCont">
+            <div class="SideMenu_Items">
+               <div class="SideMenu_Item">
+                  <img src="assets/menu/borcch.png" alt="" class="SideMenu_Image">
+                  <div class="SideMenu__textBlock">
+                     <p class="SideMenu_Item__title">Борщ</p>
+                     <p class="SideMenu_Item__description">Горячее | Обед
+                     </p>
+                  </div>
+                  <div class="SideMenu__Details">
+                     <div class="price">999$</div>
+                     <div class="price_num">
+                        <p>-</p>
+                        <p>1</p>
+                        <p>+</p>
+                     </div>
+                     <span class="Item_Delete">X</span>
+                  </div>
+               </div>
+               <div class="SideMenu_Item">
+                  <img src="assets/menu/Pancakes.webp" alt="" class="SideMenu_Image">
+                  <div class="SideMenu__textBlock">
+                     <p class="SideMenu_Item__title">Панкейк</p>
+                     <p class="SideMenu_Item__description">Горячее | Обед
+                     </p>
+                  </div>
+                  <div class="SideMenu__Details">
+                     <div class="price">999$</div>
+                     <div class="price_num">
+                        <p>-</p>
+                        <p>1</p>
+                        <p>+</p>
+                     </div>
+                     <span class="Item_Delete">X</span>
+                  </div>
+               </div>
+               <div class="SideMenu_Item">
+                  <img src="assets/menu/fish.png" alt="" class="SideMenu_Image">
+                  <div class="SideMenu__textBlock">
+                     <p class="SideMenu_Item__title">Запечёная рыба</p>
+                     <p class="SideMenu_Item__description">Горячее | Обед
+                     </p>
+                  </div>
+                  <div class="SideMenu__Details">
+                     <div class="price">999$</div>
+                     <div class="price_num">
+                        <p>-</p>
+                        <p>1</p>
+                        <p>+</p>
+                     </div>
+                     <span class="Item_Delete">X</span>
+                  </div>
+               </div>
+            </div>
+            <div class="SideMenu__Order">
+               <div class="totalSum">
+                  <p>ИТОГО</p>
+                  <p>2,997$</p>
+               </div>
+               <button class="ToOrder">ЗАКАЗАТЬ</button>
+            </div>
+         </div>
+      </div>
+      <header>
+         <p class="Logo">Шедевры кухни</p>
+         <ul class="navigation">
+            <a href="#">
+               <li>Главная</li>
+            </a>
+            <a href="menu.html">
+               <li>Меню</li>
+            </a>
+            <a href="reservation.html">
+               <li>Бронирование</li>
+            </a>
+            <a href="#review">
+               <li>Отзывы</li>
+            </a>
+         </ul>
+         <div class="purchase">
+            <a href="reservation.html" class="purchase_button ">
+               <p class="button__main"> ЗАБРОНИРОВАТЬ  </p>
+            </a>
+            <img src="assets/icons/cart.svg" onclick="OpenSide()"  alt="">
+         </div>
+      </header>
+      <main>
+         <section class="introducing introducing_One">
+            <div class="BurgerMenu" onclick="ShowMenu()">
+               <span class="BurgerLine"></span>
+               <span class="BurgerLine"></span>
+               <span class="BurgerLine"></span>
+            </div>
+            <section class="Introducing__Text">
+               <div class="welcome">
+                  <span class="line"></span>
+                  <p class="welcome_text">Привет, друг!</p>
+               </div>
+               <div class="introduce_text">
+                  <h1>Добро пожаловать <br> в шедевры кухни!</h1>
+                  <p>"Шедевры кухни" - место, где каждое блюдо - это настоящее произведение искусства!  </p>
+                  <div class="Introduce__buttons">
+                     <a href="reservation.html" class="purchase_button__second">
+                        <p> ЗАБРОНИРОВАТЬ </p>
+                     </a>
+                     <p class="menu_open">  <a href="menu.html"> ОТКРЫТЬ МЕНЮ </a></p>
+                  </div>
+               </div>
+            </section>
+         </section>
+         <section class="About">
+            <section class="About__Main">
+               <span class="next">
+               <a href="#about"> <img src="assets/icons/down.svg"  alt=""></a> 
+               </span>
+               <div class="About_Wrapper">
+                  <h2 class="About__title" id="about">О нас</h2>
+                  <p class="About__text" >Ресторан "Шедевры кухни" - это уютное место, где каждый гость может насладиться настоящими шедеврами кулинарного искусства. Наша команда талантливых шеф-поваров использует только свежие, качественные продукты и сочетает их с уникальными соусами и специями, чтобы создать блюда, которые поражают воображение своим вкусом и оформлением.
+                     <br> <br> Мы предлагаем широкий выбор блюд, приготовленных в соответствии с традиционными и современными кулинарными техниками. Наше меню включает в себя разнообразные закуски, салаты, основные блюда, десерты и напитки, которые подходят как для повседневного обеда, так и для особого праздника.
+                     <br> <br> Наш ресторан украшен современным интерьером, который создает теплую и уютную атмосферу. Мы сделали все возможное, чтобы каждый гость чувствовал себя особенным и наслаждался атмосферой нашего заведения.
+               </div>
+            </section>
+         </section>
+         <section class="menu animated">
+            <a href="menu.html"  class="button menu_button"> НАШЕ МЕНЮ</a>
+         </section>
+         <section class="events animated">
+            <div class="events__item">
+               <img class="events__image" src="assets/icons/party.svg"/>
+               <span class="events__line"></span>
+               <div class="events__text">
+                  <h3>Тематические вечеринки</h3>
+                  <p>Организуйте тематические вечеринки, которые соответствуют концепции вашего ресторана, например, вечеринку в стиле 1920-х годов, летнюю пляжную вечеринку или Хэллоуин-вечеринку. Это может быть хорошим способом привлечь посетителей, которые ищут уникальный опыт и разнообразие в развлечениях.</p>
+               </div>
+            </div>
+            <div class="events__item">
+               <img class="events__image" src="assets/icons/mk.svg"/>
+               <span class="events__line"></span>
+               <div class="events__text">
+                  <h3>Мастер классы</h3>
+                  <p>Организуйте событие, на котором профессиональный шеф-повар ресторана проведет мастер-класс по приготовлению какого-то блюда, например, суши, пиццы или десерта. Гости смогут научиться готовить свою любимую еду и получить интересные рецепты.</p>
+               </div>
+            </div>
+            <div class="events__item">
+               <img class="events__image" src="assets/icons/wine.svg"/>
+               <span class="events__line"></span>
+               <div class="events__text">
+                  <h3>Дегустация напитков</h3>
+                  <p>Во время дегустации Вы сможете насладиться вкусами изысканных вин, коктейлей, пива и других напитков, которые мы с удовольствием представим Вам в нашем уютном и элегантном зале. Мы также предоставим информацию о том, как правильно подавать и наслаждаться каждым напитком.
+                     Кроме того, Вы сможете насладиться блюдами нашего ресторана, которые отлично подходят к нашим напиткам и подчеркнут их вкусовые качества.
+                     Мы гарантируем, что в нашем ресторане вы проведете время с удовольствием и оставите воспоминания, которые надолго останутся в вашей памяти.
+                  </p>
+               </div>
+            </div>
+            <div class="events__item">
+               <img class="events__image" src="assets/icons/promotion.svg"/>
+               <span class="events__line"></span>
+               <div class="events__text">
+                  <h3>Промо акции</h3>
+                  <p>У нас всегда есть что-то новое и интересное для посетителей! Мы регулярно предлагаем различные скидки на меню и напитки, дегустационные комплекты, бесплатные десерты или бокалы вина. Наши акции могут быть временными или действовать на постоянной основе, но они всегда предназначены для того, чтобы удовлетворить вкусы и потребности наших гостей.</p>
+               </div>
+            </div>
+         </section>
+         <section class="review animated" id="review">
+            <button class="review__button"> <img src="assets/icons/review.svg" alt="">   Оставить отзыв</button>
+            <h3>Отзывы</h3>
+            <section class="review__items">
+               <div class="review__item">
+                  <img src="assets/review/male1.png" alt="">
+                  <p class="review__author_name"> Влад </p>
+                  <p class="review__author_text">"Я остался в полном восторге от ресторана 'Шедевры кухни'! Каждое блюдо было искусно приготовлено и подано с изяществом. Обслуживание было на высшем уровне - персонал был внимательным и профессиональным. Я точно вернусь в этот ресторан еще раз и порекомендую его всем своим друзьям и коллегам!"</p>
+               </div>
+               <div class="review__item">
+                  <img src="assets/review/female3.png" alt="">
+                  <p class="review__author_name"> Кристина </p>
+                  <p class="review__author_text">"В ресторане 'Шедевры кухни' я попробовала самые вкусные и изысканные блюда в своей жизни. Очень рекомендую!"</p>
+               </div>
+               <div class="review__item">
+                  <img src="assets/review/female2.png" alt="">
+                  <p class="review__author_name"> Анна </p>
+                  <p class="review__author_text">"Я осталась в полном восторге от ресторана 'Шедевры кухни'! Каждое блюдо было искусно приготовлено и подано с изяществом. Обслуживание было на высшем уровне - персонал был внимательным и профессиональным. Я точно вернусь в этот ресторан еще раз и порекомендую его всем своим друзьям и коллегам!"</p>
+               </div>
+            </section>
+         </section>
+         <section class="contact animated">
+            <section class="contact__main">
+               <div class="contact__main_left">
+                  <h3>Связь с нами</h3>
+                  <p>Где мы находимся? : Улица Кирова, 55</p>
+                  <p>Наш номер телефона: + 8 (913) 487 05 43</p>
+                  <p>График работы: 11:00 - 01:00 </p>
+               </div>
+               <form action="" class="contact__main_right">
+                  <input type="text" placeholder="Как вас зовут?">
+                  <input type="text" placeholder="Ваш e-mail?">
+                  <textarea name="" id=""  placeholder="Ваш вопрос" cols="30" rows="10"></textarea>
+                  <input type="submit" class="contact_submit" value="Отправить">
+               </form>
+               <img src="assets/contact/map.png" class="map" alt="">
+            </section>
+         </section>
+      </main>
+      <footer>
+         <ul class="left">
+            <li>Отзывы</li>
+            <li>Меню</li>
+            <li>Бронирование</li>
+            <li>События</li>
+            <li>Контакты</li>
+         </ul>
+         <ul class="right">
+            <li>Улица Кирова, 55</li>
+            <li> + 8 (913) 487 05 43</li>
+            <li>График работы: 11:00 - 01:00 </li>
+         </ul>
+         <p class="rights"> Vladislaw Dokuchaev © All Rights Reserved </p>
+         <div class="social">
+            <img src="assets/icons/insta.svg" alt="">
+            <img src="assets/icons/vk.svg" alt="">
+            <img src="assets/icons/gmaps.svg" alt="">
+         </div>
+      </footer>
+      <script src="script.js"></script>
+   </body>
+</html>
